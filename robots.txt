@@ -1,0 +1,5 @@
+User-agent: *
+sitemap: https://vmoutdoor.ru/sitemapp.xml
+
+Disallow: /adm/
+Disallow: /saler/
