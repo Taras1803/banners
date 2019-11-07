@@ -23,13 +23,21 @@ function fixSite(stage){
     
 }
 
-// $('#filters-form .tab-title').on('click', function(){
-//     $(this).next().slideToggle(300);
-// })
 
+function modal(id){
+    
+    modalOpen = 1;
+    
+    fixSite(1);
+    
+    $('.modal-bg, #' + id).removeClass('hidden');
+    
+    $('#' + id + ' .close, .modal-bg').one('click', closeModal);
+    
+}
 
 function closeModal(){
-
+    
     $('.modal-bg, .modal, .success-modal').addClass('hidden');
     
     modalOpen = 0;
@@ -39,7 +47,7 @@ function closeModal(){
 }
 
 function successModal(mes){
-
+    
     $('.modal-bg, .success-modal').removeClass('hidden').find('.message').html(mes);
     
     fixSite(1);
@@ -47,48 +55,44 @@ function successModal(mes){
 }
 
 function callback(action, id){
+    
     var title = $('#callback-modal .header-text');
+    
     switch ( action ){
+    
         case 'quickorder' :
+
             $('<input name="side_id" type="hidden">').prependTo('#callback-modal form').val(id);
+
             title.html('Быстрый заказ');
+
         break;
+
         case 'order':
+
             title.html('Заказ конструкций');
+
         break;
+
         case 'work':
+
             title.html('Работайте у нас');
+
         break;
-        case 'emailme':
-            title.html('Написать мне');
-            break;
+            
         default:
+            
             title.html('Заказать звонок');
+            
         break;
+            
     }
+    
+    $('#callback-modal form').attr('action', '/email/' + action + '/');
 
-    if(action === 'emailme'){
-        $('#callback-modalemail form').attr('action', '/email/' + action + '/');
-        modal('callback-modalemail');
-        $('#callback-modalemail input:first').focus();
-    }else{
-        $('#callback-modal form').attr('action', '/email/' + action + '/');
-        modal('callback-modal');
-        $('#callback-modal input:first').focus();
-    }
-
-
-}
-
-function modal(id){
-
-    modalOpen = 1;
-
-    fixSite(1);
-
-    $('.modal-bg, #' + id).removeClass('hidden');
-
-    $('#' + id + ' .close, .modal-bg').one('click', closeModal);
+    modal('callback-modal');
+    
+    $('#callback-modal input:first').focus();
 
 }
 
@@ -202,46 +206,29 @@ $(function(){
 
         var phone = $(this).find('input[name=phone]');
 
-        var email = $(this).find('input[name=email]');
-
-        var text = $(this).find('textarea[name=text]');
-
         var form = $(this);
 
         var action = form.attr('action');
 
         var data = form.serialize();
 
-        if (action != '/email/subscribe/' && action != '/email/emailme/'){
+        if (action != '/email/subscribe/'){
 
           if (!name.val() || name.val().length < 2) { alert('Имя должно быть не меньше 2 символов.'); return; }
 
           if (!phone.val() || phone.val().length < 5 || isNaN(phone.val())) { alert('Введите корректный номер телефона.'); return; }
 
-        }else if(action == '/email/emailme/'){
-
-            if (!name.val() || name.val().length < 2) { alert('Имя должно быть не меньше 2 символов.'); return; }
-
-            pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i;
-
-            if (!email.val() || !pattern.test(email.val())) { alert('Введите корректный email'); return; }
-
-            if (!text.val() || text.val().length < 10) { alert('Сообщение должно быть не меньше 10 символов.'); return; }
         }
 
 
         $.post(action, data, function(r){
 
-
-
-
             form.find('input').val('');
-            form.find('textarea').val('');
 
-            // if (action == '/email/callme/') {
-            //   gtag('event', 'zvonok_up');
-            //   yaCounter34928630.reachGoal('zvonok_up');
-            // }
+            if (action == '/email/callme/') {
+              gtag('event', 'zvonok_up');
+              yaCounter34928630.reachGoal('zvonok_up');
+            }
 
             if (action == '/email/order/') {
               gtag('event', 'order_done');

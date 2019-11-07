@@ -31,9 +31,9 @@
                                 <td>
                                     <? $item->seo = trim($item->seo); ?>
                                     <? if (strlen($item->seo) < 120): ?>
-                                        <?= $item->seo; ?>
+                                        <?= htmlspecialchars($item->seo); ?>
                                     <? else: ?>
-                                        <?= mb_strimwidth($item->seo, 0, 120, '...');?>
+                                        <?= mb_strimwidth(htmlspecialchars($item->seo), 0, 120, '...');?>
                                     <? endif; ?>
                                 </td>
                                 <td>
