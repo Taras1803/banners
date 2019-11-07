@@ -137,15 +137,13 @@ class Boards extends VM_Controller {
         $b_name = $board->type->name.', номер #'.$board->GID;
         $dir = ($board->direction == 1) ? "Из Москвы" : "От Москвы";
 
-        if (!isset($board->noindex)) $board->noindex = 0;
-        if (!isset($board->nofollow)) $board->nofollow = 0;
-
         $this->view('boards/detail', $board, [
             'title' => $b_name.' — '.$board->address,
             'desc' => $b_name.' расположен по адресу '.$board->address.', в направлении '.$dir,
             'canon' => "/boards/detail/$id/",
             'noindex' => $board->noindex,
             'nofollow' => $board->nofollow
+
         ]);
 
     }

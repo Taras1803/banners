@@ -49,7 +49,7 @@ class Services extends VM_Controller {
         }
         
         if( $item || $item_url ){
-            
+
             if( empty($item->content) ) show_404();
             
             if( !$category ) $category = null;

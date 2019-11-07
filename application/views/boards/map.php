@@ -36,8 +36,8 @@
                                     <label class="option" style="color: <?= $type->color ?>" for="type_<?= $type->id ?>">
                                         <div class="name"><?= $type->name ?></div>
                                         <div class="quantity"><?= $type->count ?></div>
-                                        <div class="ellipse"></div>
                                         <input type="checkbox" id="type_<?= $type->id ?>" name="type[]" value="<?= $type->code ?>">
+                                        <div class="ellipse"></div>
                                     </label>
                                 </a>
 
@@ -66,6 +66,7 @@
                                      <label class="option" for="road_<?= $road->id ?>">
                                         <?= $road->name ?>
                                         <input type="checkbox" id="road_<?= $road->id ?>" name="road[]" value="<?= $road->code ?>">
+                                        <div class="ellipse"></div>
                                      </label>
                                  </a>
 
@@ -95,6 +96,7 @@
                                         <label class="option" for="district_<?= $district->id ?>">
                                             <?= $district->name ?>
                                             <input type="checkbox" id="district_<?= $district->id ?>" name="district[]" value="<?= $district->code ?>">
+                                            <div class="ellipse"></div>
                                         </label>
                                     </a>
 
@@ -124,6 +126,7 @@
                                         <label class="option" for="town_<?= $town->id ?>">
                                             <?= $town->name ?>
                                             <input type="checkbox" id="town_<?= $town->id ?>" name="town[]" value="<?= $town->code ?>">
+                                            <div class="ellipse"></div>
                                         </label>
                                     </a>
 

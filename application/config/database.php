@@ -72,14 +72,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-$test = true;
 
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'u0293264_vm_new',
-	'password' => 'mDi1cvgu',
-	'database' => 'u0293264_vm_new',
+	'port'      => '3360',
+	'username' => 'admin_road',
+	'password' => 'demo1234',
+	'database' => 'admin_road',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

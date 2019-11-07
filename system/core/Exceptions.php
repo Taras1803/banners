@@ -187,22 +187,14 @@ class CI_Exceptions {
 
 		if($template == 'html/error_404'){
 
-		    $CI =& get_instance();
-		    $CI->load->helper('url');
+            $CI =& get_instance();
+            $CI->load->helper('url');
             redirect('404_override');
 
-//		    echo '<pre>';
-//		    print_r(11111111);
-//		    echo '</pre>';
-//		    die;
-//            $CI =& get_instance();
-//            $CI->load->model('FavoritesModel');
-//
-//            $CI->view('errors/html/error_404', ['heading' => $heading, 'message' => $message], ['title' => '404 not found',]);
 
         }
 
-//		include($templates_path.$template.'.php');
+		include($templates_path.$template.'.php');
 		$buffer = ob_get_contents();
 		ob_end_clean();
 		return $buffer;
