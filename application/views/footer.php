@@ -2,12 +2,6 @@
 
             <div class="container">
                 
-                <div class="open-callback hidden-sm" onclick="callback('callme')">
-                    
-                    <img src="/<?=TEMPLATE_DIR?>/img/icons/phone-call.svg" alt="phone-call">
-                    Обратный звонок
-                    
-                </div>
 
                 <div class="row">
 
@@ -16,7 +10,9 @@
                         <h4>Наш офис:</h4>
 
                         <p>
-                            <?= get_option('address') ?><br><?= get_option('phone') ?><a href="mailto:<?= get_option('email') ?>"><?= get_option('email') ?></a>
+                            <?= get_option('address') ?><br>
+                            <?= get_option('phone') ?>
+                            <a href="mailto:<?= get_option('email') ?>"><?= get_option('email') ?></a>
                         </p>
 
                     </div>
@@ -33,6 +29,30 @@
 
                     </div>
 
+                </div>
+
+                <div class="open-callback hidden-xs" >
+                    <div class="callback__text" onclick="callback('callme')">
+                        <!-- <img src="/<?=TEMPLATE_DIR?>/img/icons/phone-call.svg" alt="phone-call"> -->
+                        Заказать звонок
+                    </div>
+
+                    <div onclick="callback('emailme')">Написать нам</div>
+
+                    <div class="footer-socials">
+
+                        <a href="https://www.facebook.com/people/%D0%92%D0%BE%D1%81%D1%82%D0%BE%D0%BA-%D0%9C%D0%B5%D0%B4%D0%B8%D0%B0/100011182897474" class="footer-socials-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32"><image width="32" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAABE5JREFUWEetl2msXWMUhp8bIiRmIooIyVmpUDQ1FSX8IRFCQ2JITNWrlZhD0WrdFiWmGGOoGGoOgj8S/giKGtNSgpeQmGKMofFDyJX3Zu2Tffbd++6T037/zvm+/X3vWutd71praHR0lH5WRGwDHAccDuwF7Apsmt+uBb4CPgReAZ6X9Gs/9w61AYgIP3YFcDywYT7yDvAF8Fs+sjXQAfZPcP8CzwLXSTKoxtUIICI2A24A5gA/AHcAyyV9P9GFEbEDcBpwHjAJuBeYJ+mvuu9qAUTEHnYjsCOwBLhF0j/9uLQ4ExEbARcDi4DvHD5JH1fvGAcgIqYDLwG29IS6j+qARMQmwFbAWkl/loDYmGcAe+ZISSvL3/cASMvfBD4FjmojUkTsDFwCHJ2kLO42s38CPgduBV4FXgR2Aw4qG9UFkDH/ADCBZvTx+GzgLsCxfRJ4D/gd2BjYMi2+CLhZ0khm0Yok8rSCE2UAdwOnA/u1uT0iTgKeAB4D5kpyGo5bEfE18JABeDM9/C7wsKRz/N8YgEy1VcB8Sde3sNyx/gZwLI+R1CgkVQAJ4nJgKTDVKVoAsDWHOo5tbI+Is4D7gMmSrAWNqwGAs8Oi9Zqkk4c6nY4Vznm+qM36tMDx7kjat/pyREwGZiYPvH2hSViEoJQZ9oLTe5IB2KJlwE5tIpMArIKrJQ2XAUSEGW4SOyQ/l/YMwJnQXSlW3wLDBvAoMEXS1H6EJiK+BJ6WZCvKl14GLLB4Nale5bw5t8YArNUrJZ3dJ4AeZpfcuthZJGmXPu8xj6YbgPP4aknW/bpUOgUwcYp1E3BnTVydauemMJXvWSXJ1vasiJgHLDQAx2xY0v0NACwuW1T2FjcAuKrmjjmSbG0VgIVsWQFglqQHJwAwUiVSm5sjYs8s3YdJshRXAZwJPGAAfwN+oCkE9sAgANw/uAhtL+nHhhCMGMAa4PVCGmsODgrgSvNBkutCHbcs/YcUabi7pGnrOQTLUy0PaLjXmvGJAcwCTMBaIYoIe8Cl9OXSReOYHRHWkbKWzAfekuQCV42/ewML0WwD2C5/LJB0Y0MIBs2ChZKuqbnzUuBaG10Uo6eAA1PjJ2y96gqMH4gI68AZbUKUrZqLmL1zYgHAKbM6m0cLTeNaDwDcQTnj9pb0UbkhuQc4FdhHkluy2rUuALJgvQ88ImmuHygDcJy96RC4bzP56tKnqRZMGIKIcDq637Ss28g/egBkHKcAb2RTekRxqIxiEA9EhI1zFrlkHyzJ2jO26tpy560Pu5efKemzdQGQTcpzOWPYqLfL9zUNJvaEBxPnqwvMbUWr1q8Hku0XAC7TnjE8mHQtb/RAsRERmydb3SdYNG4HHs84djvd0vkxDpg/gEv4+c7z7B89mnWHlVYPVFzu4dSq5uKyQe4taSjHHsO8/svhdOnAw2mV/hGxLXBsjucrJDltuysinFYzcjx/QdIv9Ync++//tpNQ1h40E2sAAAAASUVORK5CYII="/></svg>
+                        </a>
+
+                        <a href="javascript:void(0)" class="footer-socials-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" viewBox="0 0 33 33"><image width="33" height="33" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABHNCSVQICAgIfAhkiAAAAz5JREFUWEfNmFuIzVEUxn9D8UAuuUYZNIvw5GEKD64l4cH9Fhq5TUiuRW4x1AiRkGuEYpA8ICm5PKDmwZuRT25F7rd4IIzWtEfH9p85Zzg69ut/77N/e61vfWvvk1dZWUkmw8zqAf2BwUAvoAvQGqgPfANeAHeBm8BF4Iqk75n8dl46CDNrAswB5gHtgefANaACeAp8BhoC7YBuQF+gDfAE2AHskvShNphaIcxsCrAFaAYcBg5IupHudGbWG5gOTAXeAYslHalpXSKEmTXyDYHxwClgiaRH6TaPv5tZPrAZGAOUOZikT/G83yDMrBVwDugOzJB0vK6bJ8BMAPYDt4Fhkl6mzvkFIkTgMtAJGCqp/G8BqtebWSFwHngADEiNSAzhpx4eJmUNIALxQ56V5NGpGj8hgghdfBOTUmBmXo5DQwU0BxokROkL8Aa446eW5GX7yzAz3/yYi7ZarFUQoQzvAVcljU1YuAQoCRvfBz4C7xMgmgKNgc6AA62S5MKMQU4C/YACL99qiGXAOsDiKjAzB9gEbAM2SHqVTidm1hJYASwAlsYgoWoErJZUmldQUOBO+Bi4IGlG6gYhBV6auyUtzGDzFgHYo7AaWA4UA/lxaszMq2UI0MEhBgKXgD6xEZlZUfCLNhlGYCcwKdi4+8vK4LDuD4eiA7qhXQcGOUQpUCSpbULuNgKjJFm6KPh3M9sOuMv6KJNUbGautVOSPOWxNp4BhxziijcfSeMSJu0FCiX1TPg2OZzUG5k3rvXB5FxbnmLP92szuwWUS5qV8BsnvAk6hDehfZLWJEzyEHaU5N3z5zAzB/BecAbwuh8AjPAoSDoazfVDPpTkqY0jsRaY6RBfgbmS9tQBwn2gQtLI6jVmdhroIalrHSBmAzsdwi8U02LhhBzXFAkHXyTJNVA1zGy+l7EkT0Vq1GqLhEfn4H8TiWxowjXjqfljTWSjOtz9SmJRhjRlVB21+YR/G52pT8TCDhAZ+UTWHDOhuryH+J00rWNmrXckQGzNqHeEVp7bLvrf3CeCgLzxZONm9Ta8Sep2s0pxvdzeMUM0/L2R29t2AMntuyMlLbl9gUUdMHdv0Qgkt6/yCOaf/T/xA12ZWFsM+fOnAAAAAElFTkSuQmCC"/></svg>
+                        </a>
+
+
+                    </div>
+
+                    
                 </div>
 
             </div>
@@ -88,33 +108,39 @@
         </div>
         
         <div class="modal hidden" id="callback-modal">
-            
             <div class="modal-header">
-                
                 <span class="header-text">Заказать звонок</span>
-                            
                 <div class="close"></div>
-                
             </div>
-
             <div class="modal-form">
-                
                 <form action="/email/callback/" method="POST">
-            
                     <div class="field-name">Ваше имя</div>
                     <input type="text" name="name" autocomplete="off"/>
-                    
                     <div class="field-name">Номер телефона</div>
                     <input type="text" name="phone" autocomplete="off"/>
-
-
                     <button class="yellow-btn block">Отправить</button>
-                    
                 </form>
-            
             </div>
-
         </div>
+
+        <div class="modal hidden" id="callback-modalemail">
+            <div class="modal-header">
+                <span class="header-text">Отправить письмо</span>
+                <div class="close"></div>
+            </div>
+            <div class="modal-form">
+                <form action="/email/callback/" method="POST">
+                    <div class="field-name">Ваше имя</div>
+                    <input type="text" name="name" autocomplete="off"/>
+                    <div class="field-name">Ваш email</div>
+                    <input type="text" name="email" autocomplete="off"/>
+                    <div class="field-name">Ваш вопрос</div>
+                    <textarea name="text" id="" rows="5"></textarea>
+                    <button class="yellow-btn block">Отправить</button>
+                </form>
+            </div>
+        </div>
+
 
         <a href="tel:+7(495)2669024"><div class="receiver"></div></a><!-- onclick="callback('callme')" -->
 
@@ -206,7 +232,7 @@ var google_remarketing_only = true;
     window['yandexChatWidgetCallback'] = function() {
         try {
             window.yandexChatWidget = new Ya.ChatWidget({
-                guid: '27db6d66-54c3-46f8-b5d1-4710592f483e',
+                guid: '52a721aa-c01f-4102-8246-e8d0f3077796',
                 buttonText: '',
                 title: 'Чат',
                 theme: 'light',

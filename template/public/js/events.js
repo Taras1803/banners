@@ -1,5 +1,5 @@
 $(function(){
-  $('.header-phone .open-callback').click(function(){    
+  $('.header-phone .open-callback').click(function(){
     ga('send', 'event', 'zvonok', 'up');
     yaCounter34928630.reachGoal('zvonok_up');
   });

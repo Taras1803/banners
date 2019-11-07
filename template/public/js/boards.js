@@ -523,7 +523,7 @@ $('#map-search').keyup(function(){
         val = inp.val(),
         hints = $('#filters-form #hints');
         
-        //$.get( "https://search-maps.yandex.ru/v1/?apikey=6aafb34d-6b40-4756-851f-6f4803a1401b&text=ул. Крылатские холмы&results=10&lang=ru_RU", function( data ) {
+        // $.get( "https://search-maps.yandex.ru/v1/?apikey=6aafb34d-6b40-4756-851f-6f4803a1401b&text=ул. Крылатские холмы&results=10&lang=ru_RU", function( data ) {
 
 
     t = setTimeout(function(){

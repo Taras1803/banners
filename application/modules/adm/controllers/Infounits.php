@@ -274,11 +274,7 @@ class InfoUnits extends Adm {
         if( empty($IU_Item) ) show_404();
 
         $post = $this->input->post();
-//        echo '<pre>';
-//        print_r($post);
-//        echo '</pre>';
-//        die;
-        //var_dump($post);
+
         
         if ($post) {
             
@@ -291,26 +287,18 @@ class InfoUnits extends Adm {
             
             //генерируем уникальный ЧПУ
             
-            // $url = !empty($post['url']) ? $post['url'] : translit($name);
-            $url = translit($name);
-            
+//            $url = !empty($post['url']) ? $post['url'] : translit($name);
+            $url =  translit($name);
+
             $url = $this->InfoUnitsModel->uniqueUrl($url, $id);
             
             $fields = [
-                
                 'name' => $name,
-                
                 'url' => $url,
-                
                 'content'  => $post['content'],
                 'preview'  => $post['preview'],
                 'category' => $post['category'],
-//                'noindex' => $post['noindex'],
-//                'nofollow' => $post['nofollow'],
-//                'sitemap' => $post['sitemap'],
-
                 'date_created' => $timestamp,
-                
             ];
 
             //загружаем и обновляем изображение
