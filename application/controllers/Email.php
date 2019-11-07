@@ -225,34 +225,6 @@ class Email extends VM_Controller {
         
     }
 
-    function emailme() {
-
-        $name  = $this->input->post('name');
-        $email = $this->input->post('email');
-        $text = $this->input->post('text');
-
-        if ( empty($name) || empty($email) || empty($text) ) {
-
-            die('0');
-
-        }
-
-        $this->email->initialize($this->email_config);
-
-        $this->email->from('vmoutdoor', 'Письмо с сайта');
-        $this->email->to($this->to);
-
-        $this->email->subject("vmoutdoor.ru письмо с сайта");
-
-        $msg = "<h3>Пишло письмо с сайта</h3><p>Имя: $name</p><p>Email: $email</p><p>Текст: $text</p>";
-
-        $this->email->message($msg);
-
-        $this->email->send();
-
-        echo "Мы ответим на вашу заявку !";
-
-    }
 
     function subscribeNotify($type,$email){
 

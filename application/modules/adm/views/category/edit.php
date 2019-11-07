@@ -53,14 +53,14 @@
                         <label class="control-label col-xs-2">По типу конструкции:</label>
                         <div class="col-xs-6">
                             <select name="category[board_types][]" class="select2 custom" multiple>
-                                <?php foreach($filters['board_types'] as $filter):?>
+                                <?foreach($filters['board_types'] as $filter):?>
                                     <option
                                         value="<?=$filter->id?>"
-                                        <?php if(in_array($filter->id, $category->board_types)):?>selected<?php endif;?>
+                                        <?if(in_array($filter->id, $category->board_types)):?>selected<?endif;?>
                                     >
                                         <?=$filter->name?>
                                     </option>
-                                <?php endforeach;?>
+                                <?endforeach;?>
                             </select>
                         </div>
                     </div>
@@ -68,14 +68,14 @@
                         <label class="control-label col-xs-2">По шоссе:</label>
                         <div class="col-xs-6">
                             <select name="category[roads][]" class="select2 custom" multiple>
-                                <?php foreach($filters['roads'] as $filter):?>
+                                <?foreach($filters['roads'] as $filter):?>
                                     <option
                                         value="<?=$filter->id?>"
-                                        <?php if(in_array($filter->id, $category->roads)):?>selected<?php endif;?>
+                                        <?if(in_array($filter->id, $category->roads)):?>selected<?endif;?>
                                     >
                                         <?=$filter->name?>
                                     </option>
-                                <?php endforeach;?>
+                                <?endforeach;?>
                             </select>
                         </div>
                     </div>
@@ -83,14 +83,14 @@
                         <label class="control-label col-xs-2">По району:</label>
                         <div class="col-xs-6">
                             <select name="category[districts][]" class="select2 custom" multiple>
-                                <?php foreach($filters['districts'] as $filter):?>
+                                <?foreach($filters['districts'] as $filter):?>
                                     <option
                                         value="<?=$filter->id?>"
-                                        <?php if(in_array($filter->id, $category->districts)):?>selected<?php endif;?>
+                                        <?if(in_array($filter->id, $category->districts)):?>selected<?endif;?>
                                     >
                                         <?=$filter->name?>
                                     </option>
-                                <?php endforeach;?>
+                                <?endforeach;?>
                             </select>
                         </div>
                     </div>
@@ -98,14 +98,14 @@
                         <label class="control-label col-xs-2">По городу:</label>
                         <div class="col-xs-6">
                             <select name="category[towns][]" class="select2 custom" multiple>
-                                <?php foreach($filters['towns'] as $filter):?>
+                                <?foreach($filters['towns'] as $filter):?>
                                     <option
                                         value="<?=$filter->id?>"
-                                        <?php  if(in_array($filter->id, $category->towns)):?>selected<?php endif;?>
+                                        <?if(in_array($filter->id, $category->towns)):?>selected<?endif;?>
                                     >
                                         <?=$filter->name?>
                                     </option>
-                                <?php endforeach;?>
+                                <?endforeach;?>
                             </select>
                         </div>
                     </div>

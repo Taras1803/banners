@@ -11,10 +11,10 @@
 
                 <div class="name">Наш офис</div>
 
-                <p class="address__bold">г. Москва, 3-я Песчаная улица, д. 2А</p>
+                <p>г. Москва,<br>3-я Песчаная улица, д. 2А</p>
 
-                <p class="address__grey">8 (495) 266-90-24</p>
-                <p><a href="mailto:hello@vmoutdoor.ru"><span class="address__mail">hello@vmoutdoor.ru</span></a></p>
+                <p>8 (495) 266-90-24</p>
+                <p><a href="mailto:hello@vmoutdoor.ru">hello@vmoutdoor.ru</a></p>
 
             </div>
 
@@ -22,12 +22,12 @@
 
                 <div class="name orange-marker">Наш склад</div>
 
-                <p class="address__bold">г. Видное, Белокаменное шоссе, вл18</p>
+                <p>г. Видное,<br>Белокаменное шоссе, вл18</p>
 
                 <!--<p>г. Видное,<br> Белокаменное шоссе</p>
                 <p>ул. 8-линия ГСК "Медик" гараж 261</p>-->
 
-                <p class="address__grey">+7 (925) 301-81-08 (Артём)</p>
+                <p>+7 (925) 301-81-08 (Артём)</p>
 
             </div>
 
@@ -38,7 +38,6 @@
     <div class="map" id="map"></div>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<!--    https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU-->
 
     <script src="/<?=TEMPLATE_DIR?>/js/contacts.js"></script>
 

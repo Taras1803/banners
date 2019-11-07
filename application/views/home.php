@@ -4,13 +4,13 @@
        
        <div class="overlay">
 
-           <div class="content-circle">
+           <div class="content">
 
-               <div class="content__logo">
+               <div class="col-xs-12 col-md-4">
                    <img src="/<?=TEMPLATE_DIR?>/img/vm_big.svg" class="vm-big" alt="vm_big">
                </div>
 
-               <div class="content__text">
+               <div class="col-xs-12 col-md-8">
                    <img src="/<?=TEMPLATE_DIR?>/img/vm_descript.svg" class="vm-name" alt="vm_descript">
                    <div class="operator">Оператор наружной рекламы</div>
                    <a class="yellow-btn" href="/boards/">Адресная программа</a>
@@ -114,6 +114,7 @@
        <div class="track">
 
             <?php foreach( scandir(TEMPLATE_DIR . '/img/clients') as $file ): ?>
+                <? logger($file) ?>
 
                 <?php if( is_file(TEMPLATE_DIR . '/img/clients/' . $file) ) : ?>
                     
